@@ -8,9 +8,8 @@ def basic_setup():
     st.markdown(f'<span style="color: #18448c; font-size: x-large"><b>NASDAQ STOCK GAME</b></span>'
              , unsafe_allow_html=True)
     st.markdown('___')
-    start_page()
 
 
 def start_page():
     url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/chart-analytics-stocks-increasing-growth-64.png'
-    images.get_image(url)
+    st.write(images.get_image(url))
