@@ -10,12 +10,11 @@ def get_data():
     if response.status_code == 200:
         # Parse the JSON data
         stock_data = json.loads(response.text)
-    # Extract data and make dataframe
+    # Extract data
     nested_data = stock_data['data']['data']
     return nested_data
 
-
-#Making dataframe with all stock data
+# Making dataframe with all stock data
 # df = pd.DataFrame(nested_data)
 # df = df.rename(columns={'s': 'symbol', 'n': 'company name', 'marketCap': 'market capital',
 #                         'price': 'stock price', 'change': 'percentage change',
