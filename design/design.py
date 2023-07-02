@@ -15,7 +15,7 @@ def basic_setup():
         with cols[0]:
             st.button('New Game', on_click=new_game)
         with cols[1]:
-            st.button('button 1')
+            st.button('button 1', 'blue')
         with cols[2]:
             st.button('button 2')
         with cols[3]:
@@ -32,19 +32,7 @@ def basic_setup():
 
 
 
-# Start page
-def start_page():
-    pass
-
-
-
 # New Game
 def new_game():
     pass
-
-
-# Continue game
-def continue_game():
-    pass
-
 
