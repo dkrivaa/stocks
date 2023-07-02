@@ -1,5 +1,5 @@
 
-from design import design
+from design import design, images
 from stock_data import stocks
 
 
