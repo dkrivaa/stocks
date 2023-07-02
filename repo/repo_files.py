@@ -61,4 +61,29 @@ def read_file(filename):  # filename with ''
         base_org = pd.DataFrame({'symbol': symbol, 'stock price': stock_price})
         return base_org
 
+# Function to delete file in repo of GitHub
+def del_file(filename):  # filename in ''
+    # Secrets
+    repo_url = st.secrets['REPO']
+    access_token = st.secrets['ACCESS_TOKEN']  # Personal Access Token with repo scope
+    # name and content of file to save
+    file_path = f'{filename}.csv'
+    # Prepare the API URL
+    api_url = f"https://api.github.com/repos/{repo_url}/contents/{file_path}"
+    # Set up the request headers with the access token
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    response = requests.get(api_url, headers=headers)
+    if response.status_code == 200:
+        file_info = response.json()
+        sha = file_info["sha"]
+        # Construct the request payload
+        delete_payload = {
+            "message": "Delete file",
+            "sha": sha
+         }
+    # Make the API request to create or update the file
+    response = requests.delete(api_url, headers=headers, json=delete_payload)
 
