@@ -6,10 +6,10 @@ from repo import repo_files
 # setting up basic page setup
 design.basic_setup()
 
-base = (stocks.get_data())
 
 # Save base df
-repo_files.save_new_file(base, 'test')
+base = (stocks.get_data())
+repo_files.save_new_file(base, 'base')
 
 
 

@@ -16,10 +16,15 @@ def basic_setup():
         st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Game Options</b></span>'
                     , unsafe_allow_html=True)
 
+        st.sidebar.button('Save Game', on_click=save_game())
+
 
 
 
 # New Game
 def new_game():
+    pass
+
+def save_game():
     pass
 
