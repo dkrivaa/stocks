@@ -4,7 +4,6 @@ import streamlit as st
 from design import images
 
 
-
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
     st.set_page_config(page_title='Nasdaq Stock Game', layout='wide')
@@ -15,24 +14,15 @@ def basic_setup():
         with cols[0]:
             st.button('Start New Game', on_click=new_game)
         with cols[1]:
-            st.button('Continue Game', on_click=continue_game)
+            st.button('Continue game', on_click=continue_game)
     st.markdown('___')
 
 
 
 # Start page
 def start_page():
-    start = True
-    if start:
-        cols = st.columns([1, 2])
-        with cols[0]:
-            url = 'https://cdn1.iconfinder.com/data/icons/finance-251/64/56-64.png'
-            st.image(images.get_image(url))
-            st.write('')
-        with cols[1]:
-            url = 'https://cdn0.iconfinder.com/data/icons/customicondesignoffice5/64/continue.png'
-            st.image(images.get_image(url))
-            st.write('')
+    pass
+
 
 
 # New Game
