@@ -7,8 +7,7 @@ from stock_data import stocks
 design.basic_setup()
 
 # At start up of App
-start = True
-if start:
+if design.start:
     design.start_page()
 
 
