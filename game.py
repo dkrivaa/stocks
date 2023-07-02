@@ -11,6 +11,8 @@ design.basic_setup()
 
 # Save game
 st.sidebar.button('save game', on_click=design.save_game)
+# repo_files.save_new_file(my_stocks, 'my_stocks')
+
 
 
 
