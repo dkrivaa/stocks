@@ -15,7 +15,7 @@ def basic_setup():
         with cols[0]:
             st.button('New Game', on_click=new_game)
         with cols[1]:
-            st.button('button 1', 'blue')
+            st.button('button 1', 'color: blue')
         with cols[2]:
             st.button('button 2')
         with cols[3]:
