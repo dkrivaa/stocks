@@ -11,12 +11,13 @@ def basic_setup():
              , unsafe_allow_html=True)
     st.button(':red[New Game]', on_click=new_game())
     st.markdown('___')
+
     # Sidebar
     with st.sidebar:
         st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Game Options</b></span>'
                     , unsafe_allow_html=True)
 
-        st.button('Save Game', on_click=save_game())
+        # st.button('Save Game', on_click=save_game())
 
 
 
