@@ -19,9 +19,9 @@ def start_page():
         url = 'https://cdn0.iconfinder.com/data/icons/customicondesignoffice5/64/continue.png'
         st.image(images.get_image(url))
     with cols[1]:
-        st.markdown(f'<span style="color: #18448c; font-size: 14px"><b>Start New Game</b></span>',
+        st.markdown(f'<span style="color: #18448c; font-size: 32px"><b>Start New Game</b></span>',
                     unsafe_allow_html=True)
         st.write('')
-        st.markdown(f'<span style="color: #18448c; font-size: 14px"><b>Continue Game</b></span>',
+        st.markdown(f'<span style="color: #18448c; font-size: 32px"><b>Continue Game</b></span>',
                     unsafe_allow_html=True)
 
