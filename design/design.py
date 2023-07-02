@@ -10,6 +10,7 @@ def basic_setup():
     st.markdown('___')
 
 
+# Start page
 def start_page():
     cols = st.columns([1, 2])
     with cols[0]:
@@ -24,9 +25,12 @@ def start_page():
         st.button('Continue Game', on_click=continue_game)
 
 
+# New Game
 def new_game():
-    pass
+    basic_setup()
 
+
+# Continue game
 def continue_game():
     pass
 
