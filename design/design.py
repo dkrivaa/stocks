@@ -9,12 +9,25 @@ def basic_setup():
     st.set_page_config(page_title='Nasdaq Stock Game', layout='wide')
     st.markdown(f'<span style="color: #18448c; font-size: 32px"><b>NASDAQ STOCK GAME</b></span>'
              , unsafe_allow_html=True)
+    st.write('')
     with st.container():
         cols = st.columns(8)
         with cols[0]:
             st.button('Start New Game', on_click=new_game)
         with cols[1]:
             st.button('Continue game', on_click=continue_game)
+        with cols[2]:
+            st.button('Start New Game', on_click=new_game)
+        with cols[3]:
+            st.button('Continue game', on_click=continue_game)
+        with cols[4]:
+            st.button('Start New Game', on_click=new_game)
+        with cols[5]:
+            st.button('Continue game', on_click=continue_game)
+        with cols[6]:
+            st.button('Start New Game', on_click=new_game)
+        with cols[7]:
+            st.button('About', on_click=continue_game)
     st.markdown('___')
 
 
