@@ -11,7 +11,7 @@ design.basic_setup()
 # base = (stocks.get_data())
 # repo_files.save_new_file(base, 'base')
 
-repo_files.del_file('test')
+repo_files.del_file('base')
 
 
 
