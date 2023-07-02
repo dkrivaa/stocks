@@ -11,7 +11,7 @@ def basic_setup():
 
 
 def start_page():
-    cols = st.columns([1, 8])
+    cols = st.columns([1, 4])
     with cols[0]:
         url = 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
         st.image(images.get_image(url))
