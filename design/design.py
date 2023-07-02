@@ -27,7 +27,7 @@ def start_page():
 
 # New Game
 def new_game():
-    pass
+    start = False
 
 
 # Continue game
