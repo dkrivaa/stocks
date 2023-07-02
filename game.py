@@ -7,7 +7,7 @@ from stock_data import stocks
 design.basic_setup()
 
 # At start
-start = True
+start = False
 if start:
     design.start_page()
 
