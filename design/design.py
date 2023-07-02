@@ -11,7 +11,7 @@ def basic_setup():
 
 
 def start_page():
-    cols = st.columns([1, 6])
+    cols = st.columns([1, 4])
     with cols[0]:
         url = 'https://cdn1.iconfinder.com/data/icons/finance-251/64/56-64.png'
         st.image(images.get_image(url))
