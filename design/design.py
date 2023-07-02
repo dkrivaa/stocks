@@ -1,4 +1,6 @@
 import streamlit as st
+import webbrowser
+
 
 from design import images
 
@@ -32,8 +34,7 @@ def start_page():
 
 # New Game
 def new_game():
-    start = False
-    st.sidebar.success
+    webbrowser.open('https://trading-stocks.streamlit.app/new_game')
 
 # Continue game
 def continue_game():
