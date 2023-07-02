@@ -5,8 +5,12 @@ from repo import repo_files
 
 # setting up basic page setup
 design.basic_setup()
-st.sidebar.button('test')
 
+
+
+
+# Save game
+st.sidebar.button('save game', on_click=design.save_game)
 
 
 
