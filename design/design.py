@@ -1,6 +1,6 @@
 import streamlit as st
 from repo import repo_files
-from stock_data import stocks
+from stock_data import stocks, trade
 from design import images
 
 
@@ -17,8 +17,8 @@ def basic_setup():
         st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Game Options</b></span>'
                     , unsafe_allow_html=True)
         st.title('My Portfolio Worth')
-        st.write(f'cash: ')
-        st.write(f'stocks:')
+        st.write(f'cash: {trade.cash}')
+        st.write(f'stocks: ')
 
 
 
