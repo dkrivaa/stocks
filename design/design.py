@@ -12,8 +12,6 @@ def basic_setup():
 
 # Start page
 def start_page():
-    global start
-    start = True
     cols = st.columns([1, 2])
     with cols[0]:
         url = 'https://cdn1.iconfinder.com/data/icons/finance-251/64/56-64.png'
