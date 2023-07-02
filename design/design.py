@@ -11,7 +11,7 @@ def basic_setup():
              , unsafe_allow_html=True)
     st.write('')
     with st.container():
-        cols = st.columns([1,1,1,1,1,1,1,1,2])
+        cols = st.columns([1, 1, 1, 1, 1, 1, 1, 1, 4])
         with cols[0]:
             st.button('Start New Game', on_click=new_game)
         with cols[1]:
