@@ -21,6 +21,6 @@ def start_page():
         url = 'https://cdn0.iconfinder.com/data/icons/customicondesignoffice5/64/continue.png'
         st.image(images.get_image(url))
         st.write('')
-        st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Continue Game</b></span>',
-                    unsafe_allow_html=True)
+        st.button('Continue Game')
+
 
