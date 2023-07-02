@@ -1,5 +1,3 @@
-import streamlit as st
-
 
 from design import design
 from stock_data import stocks
