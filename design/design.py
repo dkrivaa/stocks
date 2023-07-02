@@ -1,6 +1,6 @@
 import streamlit as st
 from repo import repo_files
-
+from stock_data import stocks
 from design import images
 
 
@@ -16,15 +16,25 @@ def basic_setup():
         st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Game Options</b></span>'
                     , unsafe_allow_html=True)
 
-        st.sidebar.button('Save Game', on_click=save_game())
-
+        st.button('Save Game', on_click=save_game())
 
 
 
 # New Game
 def new_game():
-    pass
+    try:
+        repo_files.del_file('base')
+        repo_files.del_file('my_stocks')
+    except:
+        pass
+    # Save base df
+    base = (stocks.get_data())
+    repo_files.save_new_file(base, 'base')
+    cash = 100000
+    return cash
+
 
 def save_game():
     pass
+    # repo_files.save_new_file(my_stocks, 'my_stocks')
 
