@@ -12,4 +12,4 @@ def basic_setup():
 
 def start_page():
     url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/chart-analytics-stocks-increasing-growth-64.png'
-    st.write(images.get_image(url))
+    st.image(images.get_image(url))
