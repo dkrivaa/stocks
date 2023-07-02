@@ -29,3 +29,33 @@ def save_new_file(file_name, filename):  # file_name as a Dataframe, filename wi
     }
     # Make the API request to create
     response = requests.put(api_url, headers=headers, json=payload)
+
+# Function to read file (the function returns Dataframe) from GitHub repository
+def read_file(filename):  # filename with ''
+    # Secrets
+    repo_url = st.secrets['REPO']
+    access_token = st.secrets['ACCESS_TOKEN']  # Personal Access Token with repo scope
+    # name and content of file to save
+    file_path = filename + '.csv'
+    # Prepare the API URL
+    api_url = f"https://api.github.com/repos/{repo_url}/contents/{file_path}"
+    # Set up the request headers with the access token
+    headers = {
+        "Authorization": f"Bearer {access_token}",
+        "Accept": "application/vnd.github.v3+json"
+    }
+    response = requests.get(api_url, headers=headers)
+    if response.status_code == 200:
+        content = response.json()['content']
+        # Decode the content from base64
+        data = base64.b64decode(content).decode('utf-8')
+        data_list = data.split()
+        data_list = data_list[2:]
+        symbol = []
+        stock_price = []
+        for items in data_list:
+            items = items.split(',')
+            symbol.append(items[0])
+            stock_price.append(items[1])
+        base_org = pd.DataFrame({'symbol': symbol, 'stock price': stock_price})
+        return base_org
