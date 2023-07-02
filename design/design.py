@@ -13,7 +13,7 @@ def basic_setup():
     with st.container():
         cols = st.columns([1, 1, 1, 1, 1, 1, 1, 1, 5])
         with cols[0]:
-            st.button(':red[New Game]', on_click=new_game())
+            st.button(':red[New Game]', help='starts new game', on_click=new_game())
         with cols[1]:
             st.button('button 1')
         with cols[2]:
