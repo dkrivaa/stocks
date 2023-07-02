@@ -12,9 +12,10 @@ def basic_setup():
     st.button(':red[New Game]', on_click=new_game())
     st.markdown('___')
     # Sidebar
-    st.sidebar.expander('options', expanded=False)
     with st.sidebar:
-        st.title('Game Options')
+        st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Game Options</b></span>'
+                    , unsafe_allow_html=True)
+
 
 
 
