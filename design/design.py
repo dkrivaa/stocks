@@ -11,6 +11,7 @@ def basic_setup():
     st.markdown('___')
     start_page()
 
+
 def start_page():
     url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/chart-analytics-stocks-increasing-growth-64.png'
     images.get_image(url)
