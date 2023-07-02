@@ -12,6 +12,9 @@ def basic_setup():
              , unsafe_allow_html=True)
     st.markdown('___')
 
+    # Sidebar
+    st.sidebar.success('choose page')
+
 
 # Start page
 def start_page():
@@ -32,7 +35,7 @@ def start_page():
 # New Game
 def new_game():
     start = False
-
+    st.sidebar.success
 
 # Continue game
 def continue_game():
