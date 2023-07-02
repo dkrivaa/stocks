@@ -1,7 +1,6 @@
 import streamlit as st
 
-import images
-
+from design import images
 
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
