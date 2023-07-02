@@ -12,7 +12,7 @@ def basic_setup():
     st.button(':red[New Game]', on_click=new_game())
     st.markdown('___')
     # Sidebar
-    with st.sidebar():
+    with st.sidebar:
         st.title('Game Options')
 
 
