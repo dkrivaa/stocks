@@ -6,7 +6,7 @@ from repo import repo_files
 design.basic_setup()
 
 # Save base df
-# repo_files.save_new_file(stocks.get_data(), 'test')
+repo_files.save_new_file(stocks.get_data(), 'test')
 
 
 
