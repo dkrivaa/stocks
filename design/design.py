@@ -13,12 +13,12 @@ def basic_setup():
 def start_page():
     cols = st.columns(2)
     with cols[0]:
-        url = 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8c3RvY2slMjBtYXJrZXR8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60'
+        url = 'https://cdn1.iconfinder.com/data/icons/finance-251/64/56-64.png'
         st.image(images.get_image(url))
         st.write('')
         st.button('Start New Game')
     with cols[1]:
-        url = 'https://images.unsplash.com/photo-1486572788966-cfd3df1f5b42?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Y29udGludWUlMjBnYW1lfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60'
+        url = 'https://cdn0.iconfinder.com/data/icons/customicondesignoffice5/64/continue.png'
         st.image(images.get_image(url))
         st.write('')
         st.button('Continue Game')
