@@ -12,8 +12,6 @@ def basic_setup():
              , unsafe_allow_html=True)
     st.markdown('___')
 
-    # Sidebar
-    st.sidebar.success('choose page')
 
 
 # Start page
