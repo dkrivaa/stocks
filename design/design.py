@@ -11,7 +11,7 @@ def basic_setup():
 
 
 def start_page():
-    cols = st.columns[1:8]
+    cols = st.columns([1, 8])
     with cols[0]:
         url = 'https://cdn4.iconfinder.com/data/icons/success-filloutline/64/chart-analytics-stocks-increasing-growth-64.png'
         st.image(images.get_image(url))
