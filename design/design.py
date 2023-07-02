@@ -1,6 +1,7 @@
 import streamlit as st
 from repo import repo_files
-from stock_data import stocks, trade
+from stock_data import stocks
+from trade import trade
 from design import images
 
 
