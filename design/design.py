@@ -33,7 +33,8 @@ def start_page():
 
 # New Game
 def new_game():
-    st._rerun()
+    pass
+
 
 # Continue game
 def continue_game():
