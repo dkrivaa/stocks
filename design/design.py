@@ -14,8 +14,6 @@ def basic_setup():
 
     # Sidebar
     with st.sidebar:
-        st.markdown(f'<span style="color: #18448c; font-size: 24px"><b>Game Options</b></span>'
-                    , unsafe_allow_html=True)
         st.title('My Portfolio Worth')
         st.write(f'cash: {trade.cash}')
         st.write(f'stocks: ')
