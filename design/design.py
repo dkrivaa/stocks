@@ -20,7 +20,9 @@ def basic_setup():
         st.write(f'cash: {trade.cash}')
         st.write(f'stocks: ')
         st.markdown('___')
-        st.write('')
+
+        st.markdown('___')
+
 
 
 # New Game
