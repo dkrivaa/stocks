@@ -29,6 +29,7 @@ def save_new_file(file_name, filename):  # file_name as a Dataframe, filename wi
     }
     # Make the API request to create
     response = requests.put(api_url, headers=headers, json=payload)
+    st.write(response.status_code)
 
 # Function to read file (the function returns Dataframe) from GitHub repository
 def read_file(filename):  # filename with ''
