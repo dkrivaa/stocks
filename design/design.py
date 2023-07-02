@@ -15,19 +15,19 @@ def basic_setup():
         with cols[0]:
             st.button('Start New Game', on_click=new_game)
         with cols[1]:
-            st.button('Continue game', on_click=continue_game)
+            st.button('button 1')
         with cols[2]:
-            st.button('Start New Game', on_click=new_game)
+            st.button('button 2')
         with cols[3]:
-            st.button('Continue game', on_click=continue_game)
+            st.button('button 3')
         with cols[4]:
-            st.button('Start New Game', on_click=new_game)
+            st.button('button 4')
         with cols[5]:
-            st.button('Continue game', on_click=continue_game)
+            st.button('button 5')
         with cols[6]:
-            st.button('Start New Game', on_click=new_game)
+            st.button('button 6')
         with cols[7]:
-            st.button('About', on_click=continue_game)
+            st.button('About')
     st.markdown('___')
 
 
