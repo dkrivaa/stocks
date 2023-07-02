@@ -19,8 +19,8 @@ def basic_setup():
         st.title('My Portfolio Worth')
         st.write(f'cash: {trade.cash}')
         st.write(f'stocks: ')
-
-
+        st.markdown('___')
+        st.write('')
 
 
 # New Game

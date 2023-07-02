@@ -1,6 +1,7 @@
 
 from stock_data import stocks
 
-cash = "{:,}".format(100000)
+cash = 100000
+cash = "{:,}".format(cash)
 data = stocks.get_data()
 
