@@ -6,7 +6,12 @@ from stock_data import stocks
 # setting up basic setup
 design.basic_setup()
 
-design.start_page()
+# At start
+start = True
+if start:
+    design.start_page()
+
+
 
 
 
