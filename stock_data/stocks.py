@@ -15,9 +15,8 @@ def get_data():
     nested_data = stock_data['data']['data']
     # Making dataframe with all stock data
     df = pd.DataFrame(nested_data)
-    df = df.rename(columns={'s': 'symbol', 'n': 'company name', 'marketCap': 'market capital',
-                            'price': 'stock price', 'change': 'percentage change',
-                            'fcf': 'free cash flow', 'netCash': 'net chash / debt'})
+    df = df.rename(columns={'s': 'symbol', 'n': 'company name',
+                            'fcf': 'free_cash_flow', 'netCash': 'net_cash_debt'})
     df.drop('no', axis=1, inplace=True)
     return df
 

@@ -84,6 +84,6 @@ def del_file(filename):  # filename in ''
             "message": "Delete file",
             "sha": sha
          }
-    # Make the API request to create or update the file
+    # Make the API request to delete the file
     response = requests.delete(api_url, headers=headers, json=delete_payload)
 
