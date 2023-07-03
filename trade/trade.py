@@ -15,7 +15,6 @@ def buy(symbol, amount):     # symbol in ''
     else:
         st.success('You do NOT have enough cash to make this purchase')
 
-buy('AAPL', 10000)
 
 def sell(symbol, amount):
     pass
