@@ -65,7 +65,8 @@ def read_file(filename):  # filename with ''
         elif filename == 'my_stocks':
             pass
         elif filename == 'my_cash':
-            st.write(len(data))
+            data_list = data.split()
+            st.write(len(data_list))
 
 # Function to delete file in repo of GitHub
 def del_file(filename):  # filename in ''
