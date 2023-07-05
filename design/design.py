@@ -25,9 +25,7 @@ def basic_setup():
     # updated stock data
     s_data = stocks.get_data()
 
-    cash = my_cash.iloc[1, 0]
-    print(type(cash))
-
+    st.write(type(my_cash))
 
     # Sidebar
     with st.sidebar:
