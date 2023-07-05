@@ -33,9 +33,10 @@ def new_game():
         repo_files.del_file('base')
         repo_files.del_file('my_stocks')
         repo_files.del_file('my_cash')
-
     except:
         pass
+
+
     # Save base df
     base = (stocks.get_data())
     repo_files.save_new_file(base, 'base')

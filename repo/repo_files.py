@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 import base64
+import pandas as pd
 import json
 
 
