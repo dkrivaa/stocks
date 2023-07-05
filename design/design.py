@@ -25,7 +25,6 @@ def basic_setup():
     # updated stock data
     s_data = stocks.get_data()
 
-    # st.write(my_cash)
 
     # Sidebar
     with st.sidebar:
