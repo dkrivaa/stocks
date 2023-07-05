@@ -51,16 +51,21 @@ def read_file(filename):  # filename with ''
         content = response.json()['content']
         # Decode the content from base64
         data = base64.b64decode(content).decode('utf-8')
-        data_list = data.split()
-        data_list = data_list[2:]
-        symbol = []
-        stock_price = []
-        for items in data_list:
-            items = items.split(',')
-            symbol.append(items[0])
-            stock_price.append(items[1])
-        base_org = pd.DataFrame({'symbol': symbol, 'stock price': stock_price})
-        return base_org
+        if filename == 'base':
+            data_list = data.split()
+            data_list = data_list[2:]
+            symbol = []
+            stock_price = []
+            for items in data_list:
+                items = items.split(',')
+                symbol.append(items[0])
+                stock_price.append(items[1])
+            base_org = pd.DataFrame({'symbol': symbol, 'stock price': stock_price})
+            return base_org
+        elif filename == 'my_stocks':
+            pass
+        elif filename == 'my_cash':
+            st.write(data)
 
 # Function to delete file in repo of GitHub
 def del_file(filename):  # filename in ''
