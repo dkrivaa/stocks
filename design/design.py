@@ -30,7 +30,7 @@ def basic_setup():
     # Sidebar
     with st.sidebar:
         st.title('My Portfolio Worth')
-        st.write(f'cash: {cash}')
+        st.write(f'cash: ')
         st.write(f'stocks: ')
         st.markdown('___')
 
