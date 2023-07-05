@@ -1,3 +1,4 @@
+import pandas as pd
 import streamlit as st
 from repo import repo_files
 from stock_data import stocks
@@ -33,6 +34,9 @@ def new_game():
     # Save base df
     base = (stocks.get_data())
     repo_files.save_new_file(base, 'base')
+    # make my_stocks file
+    my_stocks = pd.DataFrame{'symbol': [], 'buy_price': []}
+    repo_files.save_new_file(my_stocks, 'my_stocks')
     cash = 100000
     return cash
 
