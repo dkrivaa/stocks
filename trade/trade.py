@@ -5,16 +5,17 @@ import pandas as pd
 from stock_data import stocks
 from repo import repo_files
 
-# Getting data:
-# my stocks
-my_stocks = repo_files.read_file('my_stocks')
-# My cash
-my_cash = repo_files.read_file('my_cash')
-# updated stock data
-s_data = stocks.get_data()
+
 
 
 def buy(symbol, amount):     # symbol in ''
+    # Getting data:
+    # my stocks
+    my_stocks = repo_files.read_file('my_stocks')
+    # My cash
+    my_cash = repo_files.read_file('my_cash')
+    # updated stock data
+    s_data = stocks.get_data()
     cash = my_cash['cash'].sum()
     price = s_data.loc[s_data['symbol'] == symbol, 'price']
     cost = int(price * amount)
