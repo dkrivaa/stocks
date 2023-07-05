@@ -5,6 +5,21 @@ from trade import trade
 from design import images
 
 
+# New Game
+def new_game():
+    try:
+        repo_files.del_file('base')
+        # repo_files.del_file('my_stocks')
+    except:
+        pass
+    # Save base df
+    base = (stocks.get_data())
+    # repo_files.save_new_file(base, 'base')
+    cash = 100000
+    return cash
+
+
+
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
     st.set_page_config(page_title='Nasdaq Stock Game', layout='wide')
@@ -24,18 +39,7 @@ def basic_setup():
 
 
 
-# New Game
-def new_game():
-    try:
-        repo_files.del_file('base')
-        # repo_files.del_file('my_stocks')
-    except:
-        pass
-    # Save base df
-    base = (stocks.get_data())
-    # repo_files.save_new_file(base, 'base')
-    cash = 100000
-    return cash
+
 
 
 def save_game():
