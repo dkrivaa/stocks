@@ -63,7 +63,8 @@ def read_file(filename):  # filename with ''
             base_org = pd.DataFrame({'symbol': symbol, 'stock price': stock_price})
             return base_org
         elif filename == 'my_stocks':
-            st.write(data)
+            data_list = data.split()
+            st.write(data_list)
         elif filename == 'my_cash':
             data_list = data.split()
             cash = (data_list[1])
