@@ -33,7 +33,7 @@ def new_game():
         pass
     # Save base df
     base = (stocks.get_data())
-    repo_files.save_new_file(base, 'base')
+    # repo_files.save_new_file(base, 'base')
     cash = 100000
     return cash
 
