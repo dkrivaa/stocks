@@ -17,10 +17,21 @@ def basic_setup():
     st.button(':red[New Game]', on_click=new_game)
     st.markdown('___')
 
+    # Getting data:
+    # my stocks
+    my_stocks = repo_files.read_file('my_stocks')
+    # My cash
+    my_cash = repo_files.read_file('my_cash')
+    # updated stock data
+    s_data = stocks.get_data()
+
+    cash = my_cash['cash'].sum()
+
+
     # Sidebar
     with st.sidebar:
         st.title('My Portfolio Worth')
-        st.write(f'cash: ')
+        st.write(f'cash: {cash}')
         st.write(f'stocks: ')
         st.markdown('___')
 
