@@ -25,7 +25,7 @@ def basic_setup():
     # updated stock data
     s_data = stocks.get_data()
 
-    cash = my_cash['cash'].value
+    cash = my_cash['cash'].value()
 
 
     # Sidebar
