@@ -27,7 +27,7 @@ def basic_setup():
 def new_game():
     try:
         repo_files.del_file('base')
-        # repo_files.del_file('my_stocks')
+        repo_files.del_file('my_stocks')
     except:
         pass
     # Save base df
