@@ -4,6 +4,7 @@ import streamlit as st
 
 from repo import repo_files
 from stock_data import stocks
+
 from trade import trade
 from design import images
 
@@ -31,16 +32,19 @@ def new_game():
     try:
         repo_files.del_file('base')
         repo_files.del_file('my_stocks')
+        repo_files.del_file('my_cash')
+
     except:
         pass
     # Save base df
     base = (stocks.get_data())
     repo_files.save_new_file(base, 'base')
     # make my_stocks file
-    my_stocks = pd.DataFrame({'symbol': [], 'buy_price': []})
+    my_stocks = pd.DataFrame({'symbol': [], 'amount': [], 'buy_price': []})
+    my_cash = pd.DataFrame({'cash': 100000})
     repo_files.save_new_file(my_stocks, 'my_stocks')
-    cash = 100000
-    return cash
+    repo_files.save_new_file(my_cash, 'my_cash')
+
 
 
 
