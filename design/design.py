@@ -26,7 +26,7 @@ def basic_setup():
     s_data = stocks.get_data()
 
     # calculating worth of stock portfolio
-    st.write(len(my_stocks))
+    st.write(my_stocks)
 
 
     # Sidebar
