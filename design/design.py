@@ -26,10 +26,10 @@ def basic_setup():
     s_data = stocks.get_data()
 
     # calculating worth of stock portfolio
-    if len(my_stocks) == 0:
-        stock_worth = 0
+    if len(my_stocks) != 0:
+       pass
     else:
-        pass
+        stock_worth = 0
 
 
     # Sidebar

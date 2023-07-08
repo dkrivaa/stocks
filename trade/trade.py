@@ -6,8 +6,6 @@ from stock_data import stocks
 from repo import repo_files
 
 
-
-
 def buy(symbol, amount):     # symbol in ''
     # Getting data:
     # my stocks
