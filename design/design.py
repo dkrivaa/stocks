@@ -26,14 +26,17 @@ def basic_setup():
     s_data = stocks.get_data()
 
     # calculating worth of stock portfolio
-    st.write(my_stocks)
+    if len(my_stocks) == 0:
+        stock_worth = 0
+    else:
+        pass
 
 
     # Sidebar
     with st.sidebar:
         st.title('My Portfolio Worth')
         st.write(f'cash: {my_cash} ')
-        st.write(f'stocks: ')
+        st.write(f'stocks: {stock_worth}')
         st.markdown('___')
 
         st.markdown('___')
