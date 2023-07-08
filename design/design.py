@@ -25,6 +25,9 @@ def basic_setup():
     # updated stock data
     s_data = stocks.get_data()
 
+    # calculating worth of stock portfolio
+    
+
 
     # Sidebar
     with st.sidebar:
