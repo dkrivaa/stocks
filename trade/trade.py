@@ -21,7 +21,7 @@ def buy(symbol, amount):     # symbol in ''
         new_stock = {'symbol': symbol, 'amount': amount, 'buy_price': price}
         cash = cash - cost
         # updating my_stocks file
-        my_stocks.append(new_stock)
+        my_stocks.loc[len(my_stocks)] = new_stock
         repo_files.del_file('my_stocks')
         repo_files.save_new_file(my_stocks, 'my_stocks')
         # updating my_cash file
