@@ -18,7 +18,7 @@ def buy(symbol, amount):     # symbol in ''
     price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
     cost = price * amount
     if cost <= cash:
-        new_stock = {'symbol': symbol, 'amount': amount, 'buy_price': price}
+        new_stock = {'symbol': symbol, 'amount': amount, 'org_price': price}
         cash = cash - cost
         # updating my_stocks file
         my_stocks.loc[len(my_stocks)] = new_stock
