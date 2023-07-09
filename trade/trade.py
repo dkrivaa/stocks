@@ -26,9 +26,9 @@ def buy(symbol, amount):     # symbol in ''
         repo_files.save_new_file(my_stocks, 'my_stocks')
         # updating my_cash file
         repo_files.del_file('my_cash')
-        my_cash = pd.DataFrame({'cash': cash})
-        repo_files.save_new_file(my_cash, 'my_cash')
-
+        # my_cash = pd.DataFrame({'cash': cash})
+        # repo_files.save_new_file(my_cash, 'my_cash')
+        st.write(cash)
     else:
         st.success('You do NOT have enough cash to make this purchase')
 
