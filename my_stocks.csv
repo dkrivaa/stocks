@@ -1,1 +1,2 @@
-symbol,amount,buy_price
+symbol,amount,org_price
+AAPL,10,
