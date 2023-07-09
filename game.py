@@ -9,7 +9,7 @@ from trade import trade
 design.basic_setup()
 
 
-# trade.buy('AAPL', 10)
+trade.buy('AAPL', 10)
 
 
 
