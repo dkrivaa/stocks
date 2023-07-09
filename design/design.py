@@ -62,7 +62,7 @@ def new_game():
     base = (stocks.get_data())
     repo_files.save_new_file(base, 'base')
     # make my_stocks file
-    my_stocks = pd.DataFrame({'symbol': [], 'amount': [], 'buy_price': []})
+    my_stocks = pd.DataFrame({'symbol': [], 'amount': [], 'org_price': []})
     my_cash = pd.DataFrame({'cash': [100000]})
     repo_files.save_new_file(my_stocks, 'my_stocks')
     repo_files.save_new_file(my_cash, 'my_cash')
