@@ -29,11 +29,9 @@ def buy(symbol, amount):     # symbol in ''
         my_cash = pd.DataFrame({'cash': [cash]})
         repo_files.save_new_file(my_cash, 'my_cash')
 
-        design.basic_setup()
-
-        # my_stocks = repo_files.read_file('my_stocks')
-        # stock_worth = design.calc_stock_worth(my_stocks, s_data)
-        # design.sidebar(cash, stock_worth)
+        my_stocks = repo_files.read_file('my_stocks')
+        stock_worth = design.calc_stock_worth(my_stocks, s_data)
+        design.sidebar(cash, stock_worth)
     else:
         st.success('You do NOT have enough cash to make this purchase')
 
