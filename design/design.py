@@ -28,7 +28,7 @@ def basic_setup():
     # calculating worth of stock portfolio
     if len(my_stocks) != 0:
        stock_worth = 0
-       my_stock_list = my_stocks['symbol'].unique().tolist()
+       my_stock_list = my_stocks['symbol'].tolist()
        st.write(my_stock_list)
        for symbol in my_stock_list:
            amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'])
