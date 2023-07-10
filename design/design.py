@@ -9,8 +9,6 @@ from trade import trade
 from design import images
 
 
-
-
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
     st.set_page_config(page_title='Nasdaq Stock Game', layout='wide')
@@ -27,18 +25,19 @@ def basic_setup():
     # updated stock data
     s_data = stocks.get_data()
 
-    # calculating worth of stock portfolio
-    if len(my_stocks) != 0:
-       stock_worth = 0
-       my_stock_list = my_stocks['symbol'].unique().tolist()
-       for symbol in my_stock_list:
-           amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'].sum())
-           price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
-           worth = price * amount
-           st.write(amount, price, worth)
-           stock_worth = stock_worth + worth
-    else:
-        stock_worth = 0
+    # # calculating worth of stock portfolio
+    # if len(my_stocks) != 0:
+    #    stock_worth = 0
+    #    my_stock_list = my_stocks['symbol'].unique().tolist()
+    #    for symbol in my_stock_list:
+    #        amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'].sum())
+    #        price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
+    #        worth = price * amount
+    #        st.write(amount, price, worth)
+    #        stock_worth = stock_worth + worth
+    # else:
+    #     stock_worth = 0
+    calc_stock_worth(my_stocks, s_data)
 
     sidebar(my_cash, stock_worth)
 
@@ -80,3 +79,20 @@ def sidebar(my_cash, stock_worth):
         st.markdown('___')
 
         st.markdown('___')
+
+
+def calc_stock_worth(my_stocks, s_data):
+    # calculating worth of stock portfolio
+    if len(my_stocks) != 0:
+       stock_worth = 0
+       my_stock_list = my_stocks['symbol'].unique().tolist()
+       for symbol in my_stock_list:
+           amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'].sum())
+           price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
+           worth = price * amount
+           st.write(amount, price, worth)
+           stock_worth = stock_worth + worth
+    else:
+        stock_worth = 0
+
+    return stock_worth
