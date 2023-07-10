@@ -9,7 +9,7 @@ from trade import trade
 design.basic_setup()
 
 
-trade.buy('MSFT', 10)
+# trade.buy('MSFT', 10)
 
 
 
