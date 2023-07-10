@@ -28,7 +28,7 @@ def basic_setup():
     # calculating worth of stock portfolio
     if len(my_stocks) != 0:
        stock_worth = 0
-       my_stock_list = my_stocks['symbol'].tolist()
+       my_stock_list = my_stocks['symbol'].unique().tolist()
        for symbol in my_stock_list:
            amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'].sum())
            price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
