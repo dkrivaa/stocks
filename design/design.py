@@ -30,7 +30,7 @@ def basic_setup():
        stock_worth = 0
        my_stock_list = my_stocks['symbol'].tolist()
        for symbol in my_stock_list:
-           amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, my_stocks['amount'].sum()])
+           amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'])
            price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
            worth = price * amount
            stock_worth = stock_worth + worth
