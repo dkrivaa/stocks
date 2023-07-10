@@ -37,7 +37,7 @@ def basic_setup():
     #        stock_worth = stock_worth + worth
     # else:
     #     stock_worth = 0
-    calc_stock_worth(my_stocks, s_data)
+    stock_worth = calc_stock_worth(my_stocks, s_data)
 
     sidebar(my_cash, stock_worth)
 
