@@ -31,8 +31,7 @@ def basic_setup():
        my_stock_list = my_stocks['symbol'].tolist()
        st.write(my_stock_list)
        for symbol in my_stock_list:
-           amount = (my_stocks.loc[my_stocks['symbol'] == symbol,
-                        my_stocks.groupby(my_stocks[symbol])['amount'].sum().values])
+           amount = (my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'])
            price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
            worth = price * amount
            stock_worth = stock_worth + worth
