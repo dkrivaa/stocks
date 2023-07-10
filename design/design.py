@@ -9,6 +9,16 @@ from trade import trade
 from design import images
 
 
+def sidebar(my_cash, stock_worth):
+    # Sidebar
+    with st.sidebar:
+        st.title('My Portfolio')
+        st.write(f'cash: {my_cash} ')
+        st.write(f'stocks: {stock_worth}')
+        st.markdown('___')
+
+        st.markdown('___')
+
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
     st.set_page_config(page_title='Nasdaq Stock Game', layout='wide')
@@ -38,15 +48,15 @@ def basic_setup():
     else:
         stock_worth = 0
 
-
-    # Sidebar
-    with st.sidebar:
-        st.title('My Portfolio')
-        st.write(f'cash: {my_cash} ')
-        st.write(f'stocks: {stock_worth}')
-        st.markdown('___')
-
-        st.markdown('___')
+    sidebar(my_cash, stock_worth)
+    # # Sidebar
+    # with st.sidebar:
+    #     st.title('My Portfolio')
+    #     st.write(f'cash: {my_cash} ')
+    #     st.write(f'stocks: {stock_worth}')
+    #     st.markdown('___')
+    #
+    #     st.markdown('___')
 
 
 # New Game
