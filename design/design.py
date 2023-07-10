@@ -29,6 +29,7 @@ def basic_setup():
     if len(my_stocks) != 0:
        stock_worth = 0
        my_stock_list = my_stocks['symbol'].unique().tolist()
+       st.write(my_stock_list)
        for symbol in my_stock_list:
            amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'])
            price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
