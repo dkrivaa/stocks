@@ -9,15 +9,7 @@ from trade import trade
 from design import images
 
 
-def sidebar(my_cash, stock_worth):
-    # Sidebar
-    with st.sidebar:
-        st.title('My Portfolio')
-        st.write(f'cash: {my_cash} ')
-        st.write(f'stocks: {stock_worth}')
-        st.markdown('___')
 
-        st.markdown('___')
 
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
@@ -77,3 +69,14 @@ def new_game():
 def save_game():
     pass
 # repo_files.save_new_file(my_stocks, 'my_stocks')
+
+
+def sidebar(my_cash, stock_worth):
+    # Sidebar
+    with st.sidebar:
+        st.title('My Portfolio')
+        st.write(f'cash: {my_cash} ')
+        st.write(f'stocks: {stock_worth}')
+        st.markdown('___')
+
+        st.markdown('___')
