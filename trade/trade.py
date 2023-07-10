@@ -4,7 +4,7 @@ import pandas as pd
 
 from stock_data import stocks
 from repo import repo_files
-
+from design import design
 
 def buy(symbol, amount):     # symbol in ''
     # Getting data:
@@ -28,6 +28,10 @@ def buy(symbol, amount):     # symbol in ''
         repo_files.del_file('my_cash')
         my_cash = pd.DataFrame({'cash': [cash]})
         repo_files.save_new_file(my_cash, 'my_cash')
+
+        my_stocks = repo_files.read_file('my_stocks')
+        stock_worth = design.calc_stock_worth(my_stocks, s_data)
+        design.sidebar(cash, stock_worth)
     else:
         st.success('You do NOT have enough cash to make this purchase')
 
