@@ -49,14 +49,6 @@ def basic_setup():
         stock_worth = 0
 
     sidebar(my_cash, stock_worth)
-    # # Sidebar
-    # with st.sidebar:
-    #     st.title('My Portfolio')
-    #     st.write(f'cash: {my_cash} ')
-    #     st.write(f'stocks: {stock_worth}')
-    #     st.markdown('___')
-    #
-    #     st.markdown('___')
 
 
 # New Game
