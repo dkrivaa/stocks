@@ -9,7 +9,7 @@ from trade import trade
 design.basic_setup()
 
 
-trade.buy('CMCSA', 18)
+trade.buy('GILD', 2)
 
 
 
