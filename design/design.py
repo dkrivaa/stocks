@@ -33,6 +33,7 @@ def basic_setup():
            amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'].sum())
            price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
            worth = price * amount
+           st.write(amount, price, worth)
            stock_worth = stock_worth + worth
     else:
         stock_worth = 0
