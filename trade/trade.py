@@ -14,7 +14,7 @@ def buy(symbol, amount):     # symbol in ''
     my_cash = repo_files.read_file('my_cash')
     # updated stock data
     s_data = stocks.get_data()
-    st.write(type(my_cash))
+    st.write(my_cash)
     cash = int(my_cash)
     price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
     cost = price * amount
