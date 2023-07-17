@@ -29,6 +29,8 @@ def basic_setup():
     # Populating sidebar
     sidebar(my_cash, stock_worth)
 
+    st.dataframe(my_stocks)
+
 
 # New Game
 def new_game():
