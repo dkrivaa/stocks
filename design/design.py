@@ -39,7 +39,7 @@ def basic_setup():
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format=','),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True, format='.1f'),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True, format='.1f'),
-        'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.1f')
+        'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.1f'),
         'sell': st.column_config.CheckboxColumn('Sell?', default=False)
     })
 
