@@ -36,7 +36,7 @@ def basic_setup():
             my_stocks['price'] = float(s_data.loc[s_data['symbol'] == s, 'price'])
         my_stocks['change'] = (float(my_stocks['price'])/my_stocks['org_price'])-1
         my_stocks['sell'] = False
-    st.dataframe(my_stocks, column_config={
+    st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
