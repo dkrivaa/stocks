@@ -32,13 +32,15 @@ def basic_setup():
     my_stocks = my_stocks.rename_axis(index='Order ID')
     if len(my_stocks) != 0:
         my_stocks['price'] = int(s_data.loc[s_data['symbol'] == my_stocks['symbol'], 'price'])
-        my_stocks['change'] = (my_stocks['price']/my_stocks['org_price'])*100
+        my_stocks['change'] = (my_stocks['price']/my_stocks['org_price'])
+        my_stocks['sell'] = None
     st.dataframe(my_stocks, column_config={
-        'symbol': 'Symbol',
-        'amount': 'Amount of Stocks',
-        'org_price': 'Purchase price',
-        'price': 'Latest Price',
-        'change': 'Percentage Change'
+        'symbol': st.column_config.Column('Symbol', disabled=True),
+        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format=','),
+        'org_price': st.column_config.NumberColumn('Purchase price', disabled=True, format='.1f'),
+        'price': st.column_config.NumberColumn('Latest Price', disabled=True, format='.1f'),
+        'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.1f')
+        'sell': st.column_config.CheckboxColumn('Sell?', default=False)
     })
 
 # New Game
