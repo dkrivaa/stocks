@@ -42,7 +42,7 @@ def basic_setup():
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True),
-        'sell': st.column_config.CheckboxColumn('Sell?')
+        'sell': st.column_config.CheckboxColumn('Sell?', disabled=False)
     })
 
 # New Game
