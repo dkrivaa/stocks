@@ -35,14 +35,14 @@ def basic_setup():
         for s in my_symbol:
             my_stocks['price'] = int(s_data.loc[s_data['symbol'] == s, 'price'])
         my_stocks['change'] = float(my_stocks['price'])/float(my_stocks['org_price'])
-        my_stocks['sell'] = True
+        my_stocks['sell'] = False
     st.dataframe(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True),
-        'sell': st.column_config.CheckboxColumn('Sell?', disabled=False)
+        'sell': st.column_config.CheckboxColumn('Sell?')
     })
 
 # New Game
