@@ -43,7 +43,7 @@ def basic_setup():
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.2f%%'),
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
-    if test['sell']:
+    if test['sell'] is True:
         st.write(test['symbol'])
 
 
