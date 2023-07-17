@@ -28,8 +28,9 @@ def basic_setup():
     stock_worth = calc_stock_worth(my_stocks, s_data)
     # Populating sidebar
     sidebar(my_cash, stock_worth)
-
+    my_stocks = my_stocks.rename_axis(index='Order ID')
     st.dataframe(my_stocks, column_config={
+        'symbol': 'Symbol',
         'amount': 'Amount of Stocks',
         'org_price': 'Purchase price'
     })
