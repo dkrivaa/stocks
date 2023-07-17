@@ -34,7 +34,7 @@ def basic_setup():
         my_symbol = my_stocks['symbol'].unique().tolist()
         for s in my_symbol:
             my_stocks['price'] = int(s_data.loc[s_data['symbol'] == s, 'price'])
-        my_stocks['change'] = float(my_stocks['price'])/float(my_stocks['org_price'])
+        my_stocks['change'] = (float(my_stocks['price'])/float(my_stocks['org_price']))-1
         my_stocks['sell'] = False
     st.dataframe(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
@@ -89,7 +89,6 @@ def calc_stock_worth(my_stocks, s_data):
            amount = int(my_stocks.loc[my_stocks['symbol'] == symbol, 'amount'].sum())
            price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
            worth = price * amount
-           st.write(amount, price, worth)
            stock_worth = stock_worth + worth
     else:
         stock_worth = 0
