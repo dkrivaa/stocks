@@ -1,7 +1,6 @@
 import pandas as pd
 import streamlit as st
 
-
 from repo import repo_files
 from stock_data import stocks
 
@@ -34,7 +33,6 @@ def basic_setup():
     if len(my_stocks) != 0:
         my_stocks['price'] = int(s_data.loc[s_data['symbol'] == my_stocks['symbol'], 'price'])
         my_stocks['change'] = (my_stocks['price']/my_stocks['org_price'])*100
-
     st.dataframe(my_stocks, column_config={
         'symbol': 'Symbol',
         'amount': 'Amount of Stocks',
@@ -42,7 +40,6 @@ def basic_setup():
         'price': 'Latest Price',
         'change': 'Percentage Change'
     })
-
 
 # New Game
 def new_game():
