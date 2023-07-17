@@ -27,7 +27,6 @@ def basic_setup():
     stock_worth = calc_stock_worth(my_stocks, s_data)
     # Populating sidebar
     sidebar(my_cash, stock_worth)
-    st.write(type(my_stocks['amount'][0]))
     # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='Order ID')
     if len(my_stocks) != 0:
