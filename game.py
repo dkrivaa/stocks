@@ -9,8 +9,6 @@ from trade import trade
 design.basic_setup()
 
 
-trade.buy('GILD', 12)
-
 
 
 # Save game
