@@ -31,9 +31,9 @@ def basic_setup():
     my_stocks = my_stocks.rename_axis(index='Order ID')
     if len(my_stocks) != 0:
         my_symbol = my_stocks['symbol'].unique().tolist()
-        st.write(my_symbol)
         for s in my_symbol:
             my_stocks['price'] = float(s_data.loc[s_data['symbol'] == s, 'price'])
+            st.write(my_stocks['price'], my_stocks['org_price'])
             my_stocks['change'] = ((float(my_stocks['price'])/float(my_stocks['org_price']))-1)*100
             my_stocks['sell'] = False
     test = st.data_editor(my_stocks, column_config={
