@@ -18,15 +18,15 @@ def basic_setup():
     st.markdown('___')
 
     # Getting data:
-    # my stocks
+    # My stocks
     my_stocks = repo_files.read_file('my_stocks')
     # My cash
     my_cash = repo_files.read_file('my_cash')
     # updated stock data
     s_data = stocks.get_data()
-
+    # Calculating stock worth
     stock_worth = calc_stock_worth(my_stocks, s_data)
-
+    # Populating sidebar
     sidebar(my_cash, stock_worth)
 
 
