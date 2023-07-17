@@ -35,7 +35,7 @@ def basic_setup():
             my_stocks['price'] = float(s_data.loc[s_data['symbol'] == s, 'price'])
         my_stocks['change'] = ((float(my_stocks['price'])/float(my_stocks['org_price']))-1)*100
         my_stocks['sell'] = False
-    st.data_editor(my_stocks, column_config={
+    test = st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
@@ -43,8 +43,7 @@ def basic_setup():
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.2f%%'),
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
-    if my_stocks['sell']:
-        st.write(my_stocks['symbol'])
+
 
 # New Game
 def new_game():
