@@ -37,7 +37,7 @@ def basic_setup():
         my_stocks['sell'] = False
     st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
-        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format='%:,i%'),
+        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format='%:,u%'),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.2f%%'),
