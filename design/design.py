@@ -27,7 +27,7 @@ def basic_setup():
     stock_worth = calc_stock_worth(my_stocks, s_data)
     # Populating sidebar
     sidebar(my_cash, stock_worth)
-
+    st.write(type(my_stocks['amount'][0]))
     # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='Order ID')
     if len(my_stocks) != 0:
@@ -38,7 +38,7 @@ def basic_setup():
         my_stocks['sell'] = False
     st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
-        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format='%,.0f%'),
+        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format='%,d%'),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.2f%%'),
