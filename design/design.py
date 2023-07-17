@@ -38,7 +38,9 @@ def basic_setup():
     st.dataframe(my_stocks, column_config={
         'symbol': 'Symbol',
         'amount': 'Amount of Stocks',
-        'org_price': 'Purchase price'
+        'org_price': 'Purchase price',
+        'price': 'Latest Price',
+        'change': 'Percentage Change'
     })
 
 
