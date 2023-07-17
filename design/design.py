@@ -41,7 +41,7 @@ def basic_setup():
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.2f%%'),
-        'sell': st.column_config.CheckboxColumn('Sell?')
+        'sell': st.column_config.CheckboxColumn('Sell?', required=True)
     })
     if test['sell'] is True:
         st.write(test['symbol'])
