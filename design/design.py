@@ -44,7 +44,7 @@ def basic_setup():
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
 
-    st.write(test['sell'].values)
+    st.write(test.loc(test['sell'][0]))
 
 # New Game
 def new_game():
