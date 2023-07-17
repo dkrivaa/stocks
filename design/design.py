@@ -29,7 +29,10 @@ def basic_setup():
     # Populating sidebar
     sidebar(my_cash, stock_worth)
 
-    st.dataframe(my_stocks)
+    st.dataframe(my_stocks, column_config={
+        'amount': 'Amount of Stocks',
+        'org_price': 'Purchase price'
+    })
 
 
 # New Game
