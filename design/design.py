@@ -31,7 +31,9 @@ def basic_setup():
     # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='Order ID')
     if len(my_stocks) != 0:
-        my_stocks['price'] = int(s_data.loc[s_data['symbol'] == my_stocks['symbol'], 'price'])
+        my_symbol = my_stocks['symbol'].unique().tolist()
+        for s in my_symbol:
+            my_stocks['price'] = int(s_data.loc[s_data['symbol'] == s, 'price'])
         my_stocks['change'] = (my_stocks['price']/my_stocks['org_price'])
         my_stocks['sell'] = None
     st.dataframe(my_stocks, column_config={
