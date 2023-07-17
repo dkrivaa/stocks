@@ -28,7 +28,13 @@ def basic_setup():
     stock_worth = calc_stock_worth(my_stocks, s_data)
     # Populating sidebar
     sidebar(my_cash, stock_worth)
+
+    # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='Order ID')
+    if len(my_stocks) != 0:
+        my_stocks['price'] = int(s_data.loc[s_data['symbol'] == my_stocks['symbol'], 'price'])
+        my_stocks['change'] = (my_stocks['price']/my_stocks['org_price'])*100
+
     st.dataframe(my_stocks, column_config={
         'symbol': 'Symbol',
         'amount': 'Amount of Stocks',
