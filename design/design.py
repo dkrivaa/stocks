@@ -38,10 +38,10 @@ def basic_setup():
         my_stocks['sell'] = None
     st.dataframe(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
-        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True, format=','),
-        'org_price': st.column_config.NumberColumn('Purchase price', disabled=True, format='.1f'),
-        'price': st.column_config.NumberColumn('Latest Price', disabled=True, format='.1f'),
-        'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.1f'),
+        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
+        'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
+        'price': st.column_config.NumberColumn('Latest Price', disabled=True),
+        'change': st.column_config.NumberColumn('Percentage Change', disabled=True),
         'sell': st.column_config.CheckboxColumn('Sell?', default=False)
     })
 
