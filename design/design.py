@@ -62,7 +62,7 @@ def sidebar(my_cash, stock_worth):
     with st.sidebar:
         st.title('My Portfolio')
         st.write(f'cash: {int(my_cash):,} ')
-        st.write(f'stocks: {stock_worth}')
+        st.write(f'stocks: {stock_worth:,}')
         st.markdown('___')
 
         st.markdown('___')
