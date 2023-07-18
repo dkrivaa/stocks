@@ -9,7 +9,6 @@ from trade import trade
 sell_list = design.basic_setup()
 buy_list = design.market()
 
-st.write(buy_list)
 
 
 
