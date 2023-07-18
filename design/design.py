@@ -94,7 +94,7 @@ def market():
     buy_list = []
     for i in range(0, len(market_stocks)):
         if market_stocks['buy'][i]:
-            buy_list.append(market_stocks['symbol'][i])
+            buy_list.append(i)
 
     return buy_list
 
