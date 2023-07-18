@@ -6,7 +6,7 @@ from trade import trade
 
 
 # setting up basic page setup
-exist_stocks = design.basic_setup()
+sell_list = design.basic_setup()
 
 
 
