@@ -8,7 +8,6 @@ from trade import trade
 # setting up basic page setup
 sell_list = design.basic_setup()
 
-st.write(sell_list)
 
 
 
