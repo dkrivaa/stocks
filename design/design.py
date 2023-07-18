@@ -48,6 +48,7 @@ def basic_setup():
         my_stocks['price'] = latest_price
         my_stocks['change'] = latest_change
         my_stocks['sell'] = False
+        my_stocks['sell_amount'] = 0
         # Showing my stocks
         st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My stocks</b></span>'
                  , unsafe_allow_html=True)
@@ -57,7 +58,9 @@ def basic_setup():
             'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
             'price': st.column_config.NumberColumn('Latest Price', disabled=True),
             'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
-            'sell': st.column_config.CheckboxColumn('Sell?')
+            'sell': st.column_config.CheckboxColumn('Sell?'),
+            'sell_amount': st.column_config.NumberColumn('Amount to sell', min_value=0,
+                                                         max_value=my_stocks['amount'])
         })
 
         sell_list = []
