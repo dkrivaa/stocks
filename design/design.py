@@ -77,10 +77,11 @@ def look():
     s_data['buy'] = False
 
     # The algorithm for formulating recommendation
-    s_data['test1'] = s_data['net_cash_debt']/s_data['revenue']
-    st.write(s_data['test1'].mean())
+    s_data['test1'] = s_data['net_cash_debt'] / s_data['revenue']
+    s_data['test2'] = s_data['free_cash_flow'] / s_data['revenue']
+    lookout_data = s_data[s_data['test1'] > 5500 & s_data['test2'] > 750 ]
 
-    look_stocks = st.data_editor(s_data, column_config={
+    look_stocks = st.data_editor(lookout_data, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'company name': st.column_config.TextColumn('Company', disabled=True),
         'marketCap': st.column_config.NumberColumn('MarketCap', disabled=True),
