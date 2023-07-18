@@ -9,7 +9,7 @@ from trade import trade
 design.basic_setup()
 
 # Save game
-st.sidebar.button('save game', on_click=design.save_game)
+st.sidebar.button('save game', type='primary', on_click=design.save_game)
 
 
 

@@ -23,10 +23,13 @@ def basic_setup():
     my_cash = repo_files.read_file('my_cash')
     # updated stock data
     s_data = stocks.get_data()
+
     # Calculating stock worth
     stock_worth = calc_stock_worth(my_stocks, s_data)
+
     # Populating sidebar
     sidebar(my_cash, stock_worth)
+
     # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='Order ID')
 
