@@ -35,7 +35,7 @@ def basic_setup():
 
     # Adding info and calculations for my stocks
     if len(my_stocks) != 0:
-        my_symbol = my_stocks['symbol'].unique().tolist()
+        my_symbol = my_stocks['symbol'].tolist()
         latest_price = []
         latest_change = []
         for s in my_symbol:
