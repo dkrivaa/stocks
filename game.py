@@ -8,7 +8,7 @@ from trade import trade
 # setting up basic page setup
 design.basic_setup()
 
-# Save game
+
 
 
 

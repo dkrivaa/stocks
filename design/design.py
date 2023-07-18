@@ -55,7 +55,7 @@ def basic_setup():
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
-        'change': st.column_config.NumberColumn('Percentage Change', disabled=True, format='%.2f%%'),
+        'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
 
