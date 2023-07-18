@@ -46,7 +46,8 @@ def basic_setup():
     my_stocks['price'] = latest_price
     my_stocks['change'] = latest_change
     my_stocks['sell'] = False
-
+    st.write(latest_change)
+    st.write(latest_change)
     # Showing my stocks
     st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My stocks</b></span>'
              , unsafe_allow_html=True)
