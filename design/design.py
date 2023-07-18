@@ -60,7 +60,7 @@ def basic_setup():
             'sell': st.column_config.CheckboxColumn('Sell?')
         })
 
-        st.button('Continue with sale?', on_click=sell(exist_stocks))
+    st.button('Continue with sale?', on_click=sell(exist_stocks))
 
 
 def sell(exist_stocks):
