@@ -8,6 +8,8 @@ from trade import trade
 # setting up basic page setup
 exist_stocks = design.basic_setup()
 
+st.write(exist_stocks)
+
 
 
 
