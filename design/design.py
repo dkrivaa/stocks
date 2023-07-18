@@ -29,6 +29,8 @@ def basic_setup():
     sidebar(my_cash, stock_worth)
     # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='Order ID')
+
+    # Adding info and calculations for my stocks
     if len(my_stocks) != 0:
         my_symbol = my_stocks['symbol'].unique().tolist()
         latest_price = []
@@ -41,7 +43,7 @@ def basic_setup():
     my_stocks['price'] = latest_price
     my_stocks['change'] = latest_change
     my_stocks['sell'] = False
-    test = st.data_editor(my_stocks, column_config={
+    exist_stocks = st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
@@ -50,7 +52,7 @@ def basic_setup():
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
 
-    st.write(test['sell'][0])
+    st.write(exist_stocks['sell'][0])
 
 # New Game
 def new_game():
