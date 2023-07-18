@@ -79,7 +79,7 @@ def look():
     # The algorithm for formulating recommendation
     s_data['test1'] = s_data['net_cash_debt'] / s_data['revenue']
     s_data['test2'] = s_data['free_cash_flow'] / s_data['revenue']
-    lookout_data = s_data[s_data['test1'] > 5500 & s_data['test2'] > 750 ]
+    lookout_data = s_data.loc[s_data['test1'] > 5500 & s_data['test2'] > 750 ]
 
     look_stocks = st.data_editor(lookout_data, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
