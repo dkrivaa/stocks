@@ -59,7 +59,12 @@ def basic_setup():
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
 
-    st.write(exist_stocks['sell'][0])
+    for i in range(0, len(exist_stocks)):
+        sell_list = []
+        if exist_stocks['sell'][1]:
+            sell_list.append(exist_stocks['index'])
+    st.write(sell_list)
+    return sell_list
 
 # New Game
 def new_game():
