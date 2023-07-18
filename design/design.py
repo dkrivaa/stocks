@@ -74,17 +74,30 @@ def market():
     st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>The Market Now</b></span>'
                 , unsafe_allow_html=True)
     st.dataframe(s_data)
+    s_data['buy'] = False
+    market_stocks = st.data_editor(s_data, column_config={
+        'symbol': st.column_config.Column('Symbol', disabled=True),
+        'company name': st.column_config.NumberColumn('Company', disabled=True),
+        'marketCap': st.column_config.NumberColumn('MarketCap', disabled=True),
+        'price': st.column_config.NumberColumn('Latest Price', disabled=True),
+        'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
+        'revenue': st.column_config.NumberColumn('Revenue', disabled=True),
+        'volume': st.column_config.NumberColumn('Volume', disabled=True),
+        'industry': st.column_config.TextColumn('Industry', disabled=True),
+        'sector': st.column_config.TextColumn('Sector', disabled=True),
+        'revenueGrowth': st.column_config.NumberColumn('% Revenue Growth', disabled=True, format='%.2f%%'),
+        'netincome': st.column_config.NumberColumn('Net Income', disabled=True),
+        'free_cash_flow': st.column_config.NumberColumn('Free Cash Flow', disabled=True),
+        'net_cash_debt': st.column_config.NumberColumn('Net Cash/Debt', disabled=True),
+        'buy': st.column_config.CheckboxColumn('Buy?')
+    })
 
-    # exist_stocks = st.data_editor(s_data, column_config={
-    #     'symbol': st.column_config.Column('Symbol', disabled=True),
-    #     'amount': st.column_config.NumberColumn('Amount Owned', disabled=True),
-    #     'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
-    #     'price': st.column_config.NumberColumn('Latest Price', disabled=True),
-    #     'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
-    #     'sell': st.column_config.CheckboxColumn('Sell?')
-    # })
+    buy_list = []
+    for i in range(0, len(market_stocks)):
+        if market_stocks['sell'][i]:
+            buy_list.append(market_stocks['symbol'][i])
 
-
+    return buy_list
 
 # New Game
 def new_game():
