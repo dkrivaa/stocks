@@ -11,6 +11,8 @@ buy_list = design.market()
 
 
 st.write(sell_list)
+st.write(buy_list)
+
 
 
 
