@@ -47,7 +47,7 @@ def basic_setup():
     # Showing my stocks
     st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My stocks</b></span>'
              , unsafe_allow_html=True)
-    exist_stocks = st.data_editor(my_stocks, column_config={
+    exist_stocks = st.data_editor(my_stocks, use_container_width=True, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
