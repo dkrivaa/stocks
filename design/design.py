@@ -34,7 +34,9 @@ def basic_setup():
     my_stocks = my_stocks.rename_axis(index='ID')
 
     # Adding info and calculations for my stocks
-    if len(my_stocks) != 0:
+    if len(my_stocks) == 0:
+        st.write('No Stocks')
+    elif len(my_stocks) != 0:
         my_symbol = my_stocks['symbol'].tolist()
         latest_price = []
         latest_change = []
@@ -60,7 +62,7 @@ def basic_setup():
             'sell': st.column_config.CheckboxColumn('Sell?')
         })
 
-    st.button('Continue with sale?', on_click=sell(exist_stocks))
+        st.button('Continue with sale?', on_click=sell(exist_stocks))
 
 
 def sell(exist_stocks):
