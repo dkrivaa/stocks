@@ -73,11 +73,10 @@ def market():
     # Showing my stocks
     st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>The Market Now</b></span>'
                 , unsafe_allow_html=True)
-    st.dataframe(s_data)
     s_data['buy'] = False
     market_stocks = st.data_editor(s_data, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
-        'company name': st.column_config.NumberColumn('Company', disabled=True),
+        'company name': st.column_config.TextColumn('Company', disabled=True),
         'marketCap': st.column_config.NumberColumn('MarketCap', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
