@@ -35,7 +35,7 @@ def basic_setup():
 
     # Adding info and calculations for my stocks
     if len(my_stocks) == 0:
-        st.write('No Stocks')
+        st.write('No Stocks Yet')
     elif len(my_stocks) != 0:
         my_symbol = my_stocks['symbol'].tolist()
         latest_price = []
