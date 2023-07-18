@@ -6,7 +6,10 @@ from trade import trade
 
 
 # setting up basic page setup
+# My stocks
 sell_list = design.basic_setup()
+
+# All market
 buy_list = design.market()
 
 
