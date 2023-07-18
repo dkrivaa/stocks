@@ -52,7 +52,7 @@ def basic_setup():
              , unsafe_allow_html=True)
     exist_stocks = st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
-        'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
+        'amount': st.column_config.NumberColumn('Amount Owned', disabled=True),
         'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
         'price': st.column_config.NumberColumn('Latest Price', disabled=True),
         'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
