@@ -58,6 +58,7 @@ def basic_setup():
         'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
         'sell': st.column_config.CheckboxColumn('Sell?')
     })
+    st.button('Continue with sale?')
     return exist_stocks
 
 
