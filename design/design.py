@@ -61,7 +61,7 @@ def basic_setup():
 
     for i in range(0, len(exist_stocks)):
         sell_list = []
-        if exist_stocks['sell'][i]:
+        if exist_stocks['sell'][i] == True:
             sell_list.append(exist_stocks['symbol'][i])
     st.write(sell_list)
     return sell_list
