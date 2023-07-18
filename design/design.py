@@ -43,22 +43,23 @@ def basic_setup():
             latest_price.append(x)
             y = ((float(x)/float(my_stocks.loc[my_stocks['symbol'] == s, 'org_price']))-1)*100
             latest_change.append(y)
-    my_stocks['price'] = latest_price
-    my_stocks['change'] = latest_change
-    my_stocks['sell'] = False
-    st.write(latest_change)
-    st.write(latest_change)
-    # Showing my stocks
-    st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My stocks</b></span>'
-             , unsafe_allow_html=True)
-    exist_stocks = st.data_editor(my_stocks, column_config={
-        'symbol': st.column_config.Column('Symbol', disabled=True),
-        'amount': st.column_config.NumberColumn('Amount Owned', disabled=True),
-        'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
-        'price': st.column_config.NumberColumn('Latest Price', disabled=True),
-        'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
-        'sell': st.column_config.CheckboxColumn('Sell?')
-    })
+        my_stocks['price'] = latest_price
+        my_stocks['change'] = latest_change
+        my_stocks['sell'] = False
+        st.write(latest_change)
+        st.write(latest_change)
+        # Showing my stocks
+        st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My stocks</b></span>'
+                 , unsafe_allow_html=True)
+        exist_stocks = st.data_editor(my_stocks, column_config={
+            'symbol': st.column_config.Column('Symbol', disabled=True),
+            'amount': st.column_config.NumberColumn('Amount Owned', disabled=True),
+            'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
+            'price': st.column_config.NumberColumn('Latest Price', disabled=True),
+            'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
+            'sell': st.column_config.CheckboxColumn('Sell?')
+        })
+
     st.button('Continue with sale?', on_click=sell(exist_stocks))
 
 
