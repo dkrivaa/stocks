@@ -31,7 +31,7 @@ def basic_setup():
     sidebar(my_cash, stock_worth)
 
     # Populating table of stocks owned
-    my_stocks = my_stocks.rename_axis(index='Order ID')
+    my_stocks = my_stocks.rename_axis(index='ID')
 
     # Adding info and calculations for my stocks
     if len(my_stocks) != 0:
