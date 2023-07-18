@@ -59,16 +59,19 @@ def basic_setup():
             'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
             'sell': st.column_config.CheckboxColumn('Sell?')
         })
-
-        return exist_stocks
-
-
-def sell(exist_stocks):
-    for i in range(0, len(exist_stocks)):
         sell_list = []
-        if exist_stocks['sell'][i]:
-            sell_list.append(exist_stocks['symbol'][i])
-    st.write(sell_list)
+        if exist_stocks['sell']:
+            sell_list.append(exist_stocks['symbol'])
+
+        st.write(sell_list)
+
+
+# def sell(exist_stocks):
+#     for i in range(0, len(exist_stocks)):
+#         sell_list = []
+#         if exist_stocks['sell'][i]:
+#             sell_list.append(exist_stocks['symbol'][i])
+#     st.write(sell_list)
 
 
 # New Game
