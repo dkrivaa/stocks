@@ -8,7 +8,7 @@ from trade import trade
 # setting up basic page setup
 exist_stocks = design.basic_setup()
 
-if exist_stocks:
+if exist_stocks is not None:
     for i in range(0, len(exist_stocks)):
         sell_list = []
         if exist_stocks['sell'][i]:
