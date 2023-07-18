@@ -32,14 +32,16 @@ def basic_setup():
     if len(my_stocks) != 0:
         my_symbol = my_stocks['symbol'].unique().tolist()
         latest_price = []
+        latest_change = []
         for s in my_symbol:
             x = float(s_data.loc[s_data['symbol'] == s, 'price'])
             latest_price.append(x)
-
-            # for n in range(0, len(my_symbol)):
-            #     my_stocks['change'] = ((float(my_stocks['price'][n])/float(my_stocks['org_price'][n]))-1)*100
-            #     my_stocks['sell'] = False
+        for n in range(0, len(my_symbol)):
+            y = ((float(my_stocks['price'][n])/float(my_stocks['org_price'][n]))-1)*100
+            latest_change.append(y)
+        my_stocks['sell'] = False
     my_stocks['price'] = latest_price
+    my_stocks['change'] = latest_change
     test = st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
