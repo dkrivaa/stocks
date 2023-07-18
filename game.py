@@ -8,7 +8,7 @@ from trade import trade
 # setting up basic page setup
 # My stocks
 sell_list = design.basic_setup()
-st.button('test')
+
 
 # design.look()
 # All market
