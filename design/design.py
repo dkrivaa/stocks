@@ -68,12 +68,22 @@ def basic_setup():
     return sell_list
 
 
-# def sell(exist_stocks):
-#     for i in range(0, len(exist_stocks)):
-#         sell_list = []
-#         if exist_stocks['sell'][i]:
-#             sell_list.append(exist_stocks['symbol'][i])
-#     st.write(sell_list)
+def market():
+    s_data = stocks.get_data()
+    # Showing my stocks
+    st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>The Market Now</b></span>'
+                , unsafe_allow_html=True)
+    st.dataframe(s_data)
+
+    # exist_stocks = st.data_editor(s_data, column_config={
+    #     'symbol': st.column_config.Column('Symbol', disabled=True),
+    #     'amount': st.column_config.NumberColumn('Amount Owned', disabled=True),
+    #     'org_price': st.column_config.NumberColumn('Purchase price', disabled=True),
+    #     'price': st.column_config.NumberColumn('Latest Price', disabled=True),
+    #     'change': st.column_config.NumberColumn('% Change', disabled=True, format='%.2f%%'),
+    #     'sell': st.column_config.CheckboxColumn('Sell?')
+    # })
+
 
 
 # New Game

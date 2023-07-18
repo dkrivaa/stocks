@@ -7,6 +7,8 @@ from trade import trade
 
 # setting up basic page setup
 sell_list = design.basic_setup()
+buylist = design.market()
+
 
 st.write(sell_list)
 
