@@ -60,15 +60,15 @@ def basic_setup():
             'sell': st.column_config.CheckboxColumn('Sell?')
         })
 
-        st.button('Continue with sale?', on_click=sell(exist_stocks))
+        st.button('Continue with sale?') #, on_click=sell(exist_stocks))
 
 
-def sell(exist_stocks):
-    for i in range(0, len(exist_stocks)):
-        sell_list = []
-        if exist_stocks['sell'][i]:
-            sell_list.append(exist_stocks['symbol'][i])
-    st.write(sell_list)
+# def sell(exist_stocks):
+#     for i in range(0, len(exist_stocks)):
+#         sell_list = []
+#         if exist_stocks['sell'][i]:
+#             sell_list.append(exist_stocks['symbol'][i])
+#     st.write(sell_list)
 
 
 # New Game
