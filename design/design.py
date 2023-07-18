@@ -43,6 +43,10 @@ def basic_setup():
     my_stocks['price'] = latest_price
     my_stocks['change'] = latest_change
     my_stocks['sell'] = False
+
+    # Showing my stocks
+    st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My stocks</b></span>'
+             , unsafe_allow_html=True)
     exist_stocks = st.data_editor(my_stocks, column_config={
         'symbol': st.column_config.Column('Symbol', disabled=True),
         'amount': st.column_config.NumberColumn('Amount of Stocks', disabled=True),
