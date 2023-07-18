@@ -36,8 +36,7 @@ def basic_setup():
         for s in my_symbol:
             x = float(s_data.loc[s_data['symbol'] == s, 'price'])
             latest_price.append(x)
-        for n in range(0, len(my_symbol)):
-            y = ((float(my_stocks['price'][n])/float(my_stocks['org_price'][n]))-1)*100
+            y = ((float(x)/float(my_stocks.loc[my_stocks['symbol'] == s, 'org_price']))-1)*100
             latest_change.append(y)
         my_stocks['sell'] = False
     my_stocks['price'] = latest_price
