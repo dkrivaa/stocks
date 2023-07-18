@@ -64,12 +64,11 @@ def basic_setup():
 
 
 def sell(exist_stocks):
-    pass
-#     for i in range(0, len(exist_stocks)):
-#         sell_list = []
-#         if exist_stocks['sell'][i]:
-#             sell_list.append(exist_stocks['symbol'][i])
-#     st.write(sell_list)
+    for i in range(0, len(exist_stocks)):
+        sell_list = []
+        if exist_stocks['sell'][i]:
+            sell_list.append(exist_stocks['symbol'][i])
+    st.write(sell_list)
 
 
 # New Game
