@@ -4,9 +4,6 @@ import streamlit as st
 from repo import repo_files
 from stock_data import stocks
 
-from trade import trade
-from design import images
-
 
 # BASIC SETUP OF WEB PAGE
 def basic_setup():
@@ -157,7 +154,6 @@ def new_game():
 
 def save_game():
     pass
-# repo_files.save_new_file(my_stocks, 'my_stocks')
 
 
 def sidebar(my_cash, stock_worth):
