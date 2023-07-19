@@ -161,7 +161,8 @@ def save_game():
 def portfolio(my_cash, stock_worth):
     # My Portfolio
     with st.container():
-        st.title('My Portfolio')
+        st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>My Portfolio</b></span>'
+                 , unsafe_allow_html=True)
         st.write(f'cash: {int(my_cash):,} ')
         st.write(f'stocks: {stock_worth:,}')
         st.markdown('___')
