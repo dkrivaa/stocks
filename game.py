@@ -6,7 +6,9 @@ from trade import trade
 
 
 # setting up basic page setup
-sell_list = design.basic_setup()
+design.basic_setup()
+# Getting my stocks
+sell_list = design.startup_my_stocks()
 
 # Stocks to pay attention to
 # design.look()
@@ -14,6 +16,9 @@ sell_list = design.basic_setup()
 
 # All market
 buy_list = design.market()
+
+for i in range(0, len(buy_list)):
+    pass
 
 
 
