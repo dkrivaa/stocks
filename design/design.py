@@ -166,8 +166,6 @@ def portfolio(my_cash, stock_worth):
         st.write(f'stocks: {stock_worth:,}')
         st.markdown('___')
 
-        st.markdown('___')
-        st.button('save game', type='primary', on_click=save_game)
 
 
 def calc_stock_worth(my_stocks, s_data):
