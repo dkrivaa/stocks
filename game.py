@@ -15,11 +15,11 @@ sell_list = design.startup_my_stocks()
 # design.look()
 
 
-# All market
-buy_list = design.market()
-
-for i in range(0, len(buy_list)):
-    pass
+# # All market
+# buy_list = design.market()
+#
+# for i in range(0, len(buy_list)):
+#     pass
 
 
 
