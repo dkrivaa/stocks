@@ -9,11 +9,11 @@ from design import design
 def buy(symbol, amount):     # symbol in ''
     # Getting data:
     # my stocks
-    my_stocks = repo_files.read_file('my_stocks')
+    my_stocks = repo_files.get_my_stocks()
     # My cash
-    my_cash = repo_files.read_file('my_cash')
+    my_cash = repo_files.get_cash()
     # updated stock data
-    s_data = stocks.get_data()
+    s_data = repo_files.get_stocks()
 
     cash = int(my_cash)
     price = int(s_data.loc[s_data['symbol'] == symbol, 'price'])
