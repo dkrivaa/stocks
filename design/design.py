@@ -13,6 +13,7 @@ def basic_setup():
     st.button(':red[New Game]', on_click=new_game)
     st.markdown('___')
 
+
 def startup_my_stocks():
     # Getting data:
     # My stocks
@@ -105,7 +106,7 @@ def look():
 
 
 def market():
-    s_data = stocks.get_data()
+    s_data = repo_files.get_stocks()
     # Showing my stocks
     st.markdown(f'<span style="color: #18448c; font-size: 18px"><b>The Market Now</b></span>'
                 , unsafe_allow_html=True)
