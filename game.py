@@ -4,7 +4,8 @@ from stock_data import stocks
 from repo import repo_files
 from trade import trade
 
-
+st.sidebar.markdown(f'<span style="color: #18448c; font-size: 18px"><b>Navigation</b></span>'
+             , unsafe_allow_html=True)
 # setting up basic page setup
 design.basic_setup()
 
