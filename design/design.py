@@ -26,7 +26,7 @@ def startup_my_stocks():
     # Calculating stock worth
     stock_worth = calc_stock_worth(my_stocks, s_data)
 
-    # Populating sidebar
+    # Populating portfolio info
     portfolio(my_cash, stock_worth)
 
     # Populating table of stocks owned
