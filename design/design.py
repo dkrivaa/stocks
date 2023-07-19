@@ -27,7 +27,7 @@ def startup_my_stocks():
     stock_worth = calc_stock_worth(my_stocks, s_data)
 
     # Populating sidebar
-    sidebar(my_cash, stock_worth)
+    portfolio(my_cash, stock_worth)
 
     # Populating table of stocks owned
     my_stocks = my_stocks.rename_axis(index='ID')
@@ -158,16 +158,16 @@ def save_game():
     pass
 
 
-def sidebar(my_cash, stock_worth):
-    # Sidebar
-    with st.sidebar:
+def portfolio(my_cash, stock_worth):
+    # My Portfolio
+    with st.container():
         st.title('My Portfolio')
         st.write(f'cash: {int(my_cash):,} ')
         st.write(f'stocks: {stock_worth:,}')
         st.markdown('___')
 
         st.markdown('___')
-        st.sidebar.button('save game', type='primary', on_click=save_game)
+        st.button('save game', type='primary', on_click=save_game)
 
 
 def calc_stock_worth(my_stocks, s_data):
