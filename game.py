@@ -8,7 +8,6 @@ from trade import trade
 # setting up basic page setup
 design.basic_setup()
 
-st.sidebar.title('Navigation')
 # Getting my stocks
 sell_list = design.startup_my_stocks()
 
