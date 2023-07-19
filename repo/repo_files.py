@@ -128,3 +128,4 @@ def get_stocks():
     s_data = stocks.get_data()
     return s_data
 
+
