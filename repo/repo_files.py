@@ -110,4 +110,21 @@ def del_file(filename):  # filename in ''
     response = requests.delete(api_url, headers=headers, json=delete_payload)
 
 
+# Getting data:
+def get_my_stocks():
+    # My stocks
+    my_stocks = read_file('my_stocks')
+    return my_stocks
+
+
+def get_cash():
+    # My cash
+    my_cash = read_file('my_cash')
+    return my_cash
+
+
+def get_stocks():
+    # updated stock data
+    s_data = stocks.get_data()
+    return s_data
 

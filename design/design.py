@@ -18,11 +18,11 @@ def basic_setup():
 
     # Getting data:
     # My stocks
-    my_stocks = repo_files.read_file('my_stocks')
+    my_stocks = repo_files.get_my_stocks()
     # My cash
-    my_cash = repo_files.read_file('my_cash')
+    my_cash = repo_files.get_cash()
     # updated stock data
-    s_data = stocks.get_data()
+    s_data = repo_files.get_stocks()
 
     # Calculating stock worth
     stock_worth = calc_stock_worth(my_stocks, s_data)
